@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+@font-face {
+  font-family: Bebas;
+  src: url('../fonts/BebasKai-Regular.otf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #000;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  border: 1.5px solid #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: #000;
+  background: #fff;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sky {
+  background: url('../img/unsplash_psdV2Rl-GvU-1.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-600px) scale(3);
+  z-index: 1;
+}
+
+.bushes {
+  background: url('../img/bushes.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-525px) scale(2.75);
+  z-index: 2;
+}
+
+.water {
+  background: url('../img/water.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-400px) scale(2.33333333);
+  z-index: 3;
+}
+
+.people1 {
+  background: url('../img/people1.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-250px) scale(1.833333333);
+  z-index: 4;
+}
+
+.people2 {
+  background: url('../img/people2.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-125px) scale(1.4167);
+  z-index: 5;
+}
+
+.people3 {
+  background: url('../img/people3.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: 6;
+}
+
+.hero-text {
+  background: linear-gradient(
+    rgba(105, 211, 252, 0.25) 0%,
+    rgba(255, 116, 161, 0.25) 86%,
+    rgba(1, 0, 0, 0.25) 100%
+  );
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: 7;
+}
+
+.hero-text h2 {
+  font-size: 1.25rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 2.5rem;
+}
+
+.hero-text ul {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 2.5rem;
+}
+
+.hero-text ul li {
+  margin-left: 2.5rem;
+  list-style-type: none;
+  float: left;
+  visibility: hidden;
+}
+
+.hero-text ul li:nth-of-type(3) {
+  visibility: visible;
+}
+
+.year-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 17rem;
+  height: 18rem;
+}
+#logo{
+  position: absolute;
+  width: 20rem;
+  height: 21.82rem;
+}
+
+.social-container {
+  position: absolute;
+  left: 2.5rem;
+  bottom: 2.5rem;
+}
+
+.social-container i {
+  font-size: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+.info-container {
+  background: #000;
+  transform: translateZ(0) scale(1);
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info-container img {
+  width: 75%;
+  margin-bottom: 2.5rem;
+  filter: saturate(0.65);
+}
+
+.dots{
+  position:absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+margin-left: 5px;
+width:25px;
+height:25px;
+}
+
+
+.dots1{
+  position:absolute;
+  left: 0.05rem;
+  top: 0.05rem;
+margin-left: 5px;
+width:1px;
+height:1px
+
+}
+
+
+.dots2{
+  position:absolute;
+  left: 0.05rem;
+  top: 0.05rem;
+margin-left: 5px;
+width:100px;
+height:100px
+
+}
+
+.dots3{
+  position:absolute;
+  left: 0.05rem;
+  top: 0.05rem;
+margin-left: 5px;
+width:100px;
+height:100px
+
+}
+
+.info-container h2,
+.info-container p {
+  margin-bottom: 1rem;
+}
+
+.text-container p:nth-of-type(1) {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 1rem 2.5rem;
+}
+
+.text-container p:nth-of-type(2) {
+  font-size: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 760px) {
+  .hero-text ul li {
+    visibility: visible;
+  }
+
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    align-items: center;
+    text-align: left;
+  }
+
+  .info-container img {
+    justify-self: end;
+    width: 75%;
+  }
+
+  .text-container p:nth-of-type(1) {
+    font-size: 1rem;
+    width: 75%;
+    margin: 1rem 0;
+  }
+
+  .text-container p:nth-of-type(1) {
+    font-size: 0.86rem;
+  }
+}
+
+@media (min-width: 1126px) {
+  .sky,
+  .bushes,
+  .water,
+  .people1,
+  .people2,
+  .people3,
+  .hero-text {
+    background-size: contain;
+  }
+}
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.timeline{
+  background-color: #000000;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006E51;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.container.left .date {
+  right: -75px;
+}
+
+.container.right .date {
+  left: -75px;
+}
+
+.container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  
+  border: 2px solid #006E51;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #006E51;
+  z-index: 1;
+}
+
+.container.left .icon {
+  right: 56px;
+}
+
+.container.right .icon {
+  left: 56px;
+}
+
+.container .content {
+  padding: 30px 90px 30px 30px;
+  background: #000000;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+}
+
+.container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after,
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .container.left .icon,
+  .container.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+}
+
+
+
+
+.container1{
+    display:flex;
+    
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    width:100%;
+    
+    overflow:hidden;
+  
+    &__image{
+      position:relative;
+      display:flex;
+      
+      flex-direction:column;
+      justify-content:center;
+      width:250px;
+      height:250px;
+      
+      border-radius:50%;
+      background-image:url('https://silviadiaconescu.com/work/landscape/pb-2.jpg');
+      background-size:cover;
+      transition: ease-in-out .3s;
+      
+      z-index:2;
+      &:before{
+        content: ' ';
+        position:absolute;
+        
+        width:100%;
+        height:100%;
+        top:0;
+        bottom:0;
+        left:0;
+        margin:auto;
+        
+        background: inherit;
+        background-position:bottom;
+        filter:blur(40px) saturate(0%);
+        transform:scaleX(0.4);
+        transition:ease-in-out .4s;
+        border-radius:120px;
+        transform-origin:right;
+        opacity:0;
+        
+        z-index:-1;
+      }
+      .container__info{
+        position:relative;
+        
+        line-height:1.8;
+        transition:ease-in-out .3s;
+        opacity:0;
+      }
+      .container__location{
+        transition-delay: .15s;
+      }
+      &:hover{
+        border-radius:0;
+        width:450px;
+        height:310px;
+        
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
+        &:before{
+          width:100%;
+          
+          opacity: 0.18;
+          filter:blur(10px) saturate(100%);
+          transform:scale(2.8) translate3d(-18%, 0px, 0px);
+        }
+        
+        .container__info{
+          transform:translate3d(-60%,0px,0px);
+          opacity:1;
+        }
+      }
+    }
+  }
+  .link{
+    border-bottom: 1px solid transparent;
+    color:#06C0A8;
+    text-decoration:none;
+    transition: ease-in .13s;
+    &:hover{
+       background-color: #06C0A8;
+       color:#ffffff;
+     }
+  }
+  
+  

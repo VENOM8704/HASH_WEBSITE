@@ -69,21 +69,22 @@ a {
 }
 
 .bushes {
-  background: url('../img/bushes.png') no-repeat center;
+  
   background-size: cover;
   transform: translateZ(-525px) scale(2.75);
   z-index: 2;
+
 }
 
 .water {
-  background: url('../img/water.png') no-repeat center;
+
   background-size: cover;
   transform: translateZ(-400px) scale(2.33333333);
   z-index: 3;
 }
 
 .people1 {
-  background: url('../img/people1.png') no-repeat center;
+
   background-size: cover;
   transform: translateZ(-250px) scale(1.833333333);
   z-index: 4;
@@ -97,18 +98,14 @@ a {
 }
 
 .people3 {
-  background: url('../img/people3.png') no-repeat center;
+ 
   background-size: cover;
   transform: translateZ(0) scale(1);
   z-index: 6;
 }
 
 .hero-text {
-  background: linear-gradient(
-    rgba(105, 211, 252, 0.25) 0%,
-    rgba(255, 116, 161, 0.25) 86%,
-    rgba(1, 0, 0, 0.25) 100%
-  );
+ 
   background-size: cover;
   transform: translateZ(0) scale(1);
   z-index: 7;
@@ -144,13 +141,13 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 17rem;
-  height: 18rem;
+  margin: auto
 }
 #logo{
-  position: absolute;
-  width: 20rem;
-  height: 21.82rem;
+  position:relative;
+  min-width:100vw ;
+  min-height: 100vh ;
+  margin: auto;
 }
 
 .social-container {
@@ -476,7 +473,7 @@ a {
 #Sponsors{
   height: 30vh;
 }
-#Valo_img{
+.Event_img{
   border-radius: 7%;
 }
 #gap{
